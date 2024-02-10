@@ -9,6 +9,12 @@ if(global.gamestate != pppgame_states){
 if(global.gamestate == game_states.button){
 	if(!instance_exists(obj_button_selecter)) instance_create_depth(-999,-999,layers.buttons,obj_button_selecter);
 }
+
+if(keyboard_check_pressed(global.keya)&&global.gamestate == game_states.init){
+	if(!instance_exists(obj_skillchange)) instance_create_depth(-999,-999,layers.UI,obj_skillchange);
+
+}
+
 if(keyboard_check_pressed(vk_f4)){//全屏切换
 	if(file_exists("setting.sav")){
 		ini_open("setting.sav");

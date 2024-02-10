@@ -158,7 +158,7 @@ if(showing){
 				arrow_selecting=1;
 				selected_item1=0;
 				arrow_pos=1;
-			}else{//combine another item
+			}else if(enable_combine){//combine another item
 				showing=0;
 				
 				if(global.itemdata_com[global.item[selected_item1]][global.item[arrow_pos]]){
@@ -173,6 +173,9 @@ if(showing){
 				else{
 					scr_item_com_init();
 				}
+			}else{//select the new item
+				selected_item1=arrow_pos;
+				arrow_selecting=2;
 			}
 		}
 	}else if(arrow_selecting==3){//selecting characters

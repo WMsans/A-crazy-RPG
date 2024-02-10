@@ -5,6 +5,8 @@ enum game_states{
 	cutscene,
 	setting,
 	item,
+	skill_setting,
+	
 }
 enum layers{
 	overworld = 0,

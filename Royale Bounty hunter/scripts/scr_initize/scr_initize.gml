@@ -16,10 +16,13 @@ function scr_initize(){
 	global.expecting_textblock_x=-999;
 	global.expecting_textblock_y=-999;
 	
+	#region debug
 	global.debug = 1;
 	scr_item_add(1);
 	scr_item_add(2);
-	
+	scr_skill_add(1);
+	scr_skill_add(1);
+	#endregion
 	instance_create_depth(-999,-999,0,obj_GAME);
 	scr_fadeout(rm_title, global.target_x, global.target_y);
 }

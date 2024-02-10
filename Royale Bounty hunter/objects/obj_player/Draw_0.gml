@@ -2,7 +2,7 @@
 draw_self();
 //显示技能冷却
 /*
-if(global.charaskillnum[global.charanowleader]){
+if(global.charaskillnum){
 	if(skill_cool_timer&&!instance_exists(obj_cutscene)) draw_rectangle_color(x-27,y-80,x+54*(skill_cool_timer/skill_cool)-27,y-60,make_color_rgb(0,131,255),make_color_rgb(107,206,255),make_color_rgb(107,206,255),make_color_rgb(0,131,255),false);
 }*/
 //flash

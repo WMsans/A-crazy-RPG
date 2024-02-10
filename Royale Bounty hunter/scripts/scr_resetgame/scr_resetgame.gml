@@ -29,18 +29,15 @@ function scr_resetgame(){
 	
 	global.charanum=1;
 	global.charanowskill=1;
-	global.charanowleader=1;
+	global.charaskillnum=0;
+	global.charaskill[1]=1;
 	for(var i=1;i<=12;i++){
 		global.charaname[i]="Alex";
 		global.charamaxhp[i]=100;
 		global.charaweapon[i]=5;
 		global.charaarmor[i]=4;
 		global.charaspr[i]=1;
-		global.charaskill[i][1]=1;
-		global.charaskillnum[i]=0;
-		global.charabattletarget[i]=1;
 		global.charaattack[i]=0;
-		global.charamagicattack[i]=0;
 		global.chararesistance[i]=0;
 	}
 }

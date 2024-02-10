@@ -10,6 +10,7 @@ if(!keyboard_check(global.keyz)) pressingz=0;
 	draw_set_halign(fa_left);
 #region setup
 if(!setup){
+	setup = true;
 	if(page_num==0){
 		if(instance_exists(obj_textbox_arrow)) instance_destroy(obj_textbox_arrow);
 		instance_destroy();
@@ -72,7 +73,7 @@ if(!setup){
 		option_color[i]=c_white;
 	}
 	
-	setup=true;
+	
 }
 #endregion
 #region typing
@@ -132,11 +133,13 @@ if(accept_key){
 #endregion
 
 #region draw the box
-txtb_img+=txtb_img_spd;
-if(!print_op)
-	draw_sprite(txtb_spr[page],txtb_img,box_x+144,box_y);
-else
-	draw_sprite(spr_textbox,txtb_img,box_x+144,box_y);
+if(page_num){
+	txtb_img+=txtb_img_spd;
+	if(!print_op)
+		draw_sprite(txtb_spr[page],txtb_img,box_x+144,box_y);
+	else
+		draw_sprite(spr_textbox,txtb_img,box_x+144,box_y);
+}
 #endregion
 #region draw the portrait
 if(!print_op){//Not printing option
