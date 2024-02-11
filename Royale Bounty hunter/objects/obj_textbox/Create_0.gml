@@ -1,5 +1,5 @@
 /// @description 
-global.gamestate=game_states.cutscene;
+allow_move = false;
 
 box_w=992;
 border=32;

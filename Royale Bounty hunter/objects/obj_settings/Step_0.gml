@@ -52,7 +52,7 @@ if(inputting){
 }
 if(page==pages.graphics) ds_grid[# 3, menu_option[pages.graphics]]=!window_get_fullscreen();
 if(keyboard_check_pressed(global.keyz)){
-	//scr_save_setting();
+	scr_save_setting();
 	switch(ds_grid[# 1,menu_option[page]]){
 		case element_type.script_runner:
 			script_execute(ds_grid[# 2,menu_option[page]]);

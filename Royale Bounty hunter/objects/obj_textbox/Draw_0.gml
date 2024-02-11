@@ -10,6 +10,8 @@ if(!keyboard_check(global.keyz)) pressingz=0;
 	draw_set_halign(fa_left);
 #region setup
 if(!setup){
+	if(!allow_move) global.gamestate = game_states.cutscene;
+	else global.gamestate = game_states.init;
 	setup = true;
 	if(page_num==0){
 		if(instance_exists(obj_textbox_arrow)) instance_destroy(obj_textbox_arrow);

@@ -3,8 +3,11 @@ function scr_initize(){
 	scr_enums();
 	global.gamestate = game_states.init;
 	global.gamestate_last = -1;
+	global.checkpoint_id = noone;
 	if(!file_exists("file0.sav")){
 		scr_resetgame();
+	}else{
+		scr_loadgame();
 	}
 	scr_itemdata_load();
 	scr_load_setting();

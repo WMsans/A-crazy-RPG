@@ -1,1 +1,3 @@
-sign_id = "hello undertale";
+sign_id = "hello_world";
+
+allow_move = true;

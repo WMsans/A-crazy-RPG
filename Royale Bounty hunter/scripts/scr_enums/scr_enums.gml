@@ -6,7 +6,7 @@ enum game_states{
 	setting,
 	item,
 	skill_setting,
-	
+	saving,
 }
 enum layers{
 	overworld = 0,

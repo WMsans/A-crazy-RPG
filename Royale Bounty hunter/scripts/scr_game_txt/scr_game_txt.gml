@@ -1,7 +1,15 @@
 function scr_game_txt(_text_id){
 	switch(_text_id){
 		#region sign
-		case "hello world":
+		case "saving":
+			scr_text("Your HP fully recovered.");
+			savebox = true;
+			break;
+		case "saved":
+			scr_text("Your game progress has been successfully saved.");
+			break;
+		case "hello_world":
+			allow_move = true;
 			scr_text("Hi. I'm the first sign...");
 			scr_text("I'm blue now!");
 				scr_text_color(4,8,c_blue,c_blue,c_white,c_white,);//更改颜色，顺序：左上，右上，左下，右下
@@ -33,6 +41,14 @@ function scr_game_txt(_text_id){
 			scr_text("You feel...very banana.");
 			break;
 		
+		#endregion
+		#region item pick up
+		case"item_pick1":
+			scr_text("You picked up an apple.");
+			break;
+		case"item_pick2":
+			scr_text("You picked up a banana.");
+			break;
 		#endregion
 		#region item combine
 		case"combine_fail":

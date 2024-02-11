@@ -2,21 +2,6 @@ function scr_resetgame(){
 	global.checkpoint_rm=rm_1;//first room of the game
 	global.checkpoint_x=768;
 	global.checkpoint_y=288;
-	
-	#region keyboard
-	global.keyup = vk_up;
-	global.keydown = vk_down;
-	global.keyleft = vk_left;
-	global.keyright = vk_right;
-	global.keyz = ord("Z");
-	global.keyx = ord("X");
-	global.keyc = ord("C");
-	global.keya=ord("A");
-	global.keyesc = vk_escape;
-	global.keyshift=vk_shift;
-	global.keyctrl=vk_control;
-	global.keyspace=vk_space;
-	#endregion
 	 
 	global.gold=0;
 	global.backpacksize=8;
@@ -40,4 +25,19 @@ function scr_resetgame(){
 		global.charaattack[i]=0;
 		global.chararesistance[i]=0;
 	}
+	
+	ini_open("setting.sav");
+	global.keyup = ini_read_real("control","UP",vk_up);
+	global.keyleft = ini_read_real("control","LEFT",vk_left);
+	global.keyright = ini_read_real("control","RIGHT",vk_right);
+	global.keydown = ini_read_real("control","DOWN",vk_down);
+	global.keyz = ini_read_real("control","CONFIRM",ord("Z"));
+	global.keyx = ini_read_real("control","CANCLE",ord("X"));
+	global.keyc = ini_read_real("control","BACKPACK",ord("C"));
+	global.keya = ini_read_real("control","SKILL",ord("A"));
+	global.keyesc = ini_read_real("control","ESCAPE",vk_escape);
+	global.keyshift = ini_read_real("control","SHIFT",vk_shift);
+	global.keyctrl =  ini_read_real("control","CONTROL",vk_control);
+	global.keyspace = ini_read_real("control","SPACE",vk_space);
+	ini_close();
 }
