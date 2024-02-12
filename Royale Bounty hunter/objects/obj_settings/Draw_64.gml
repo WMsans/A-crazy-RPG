@@ -19,7 +19,7 @@ for(var yy=0;yy<ds_height;yy++){
 	if(yy=menu_option[page]){
 		c=c_yellow;
 		x_tar_offset[page][yy]=-32;
-	}else if(yy==6&&page==0&&room==rm_title){
+	}else if(ds_grid[# 0, yy] == "Back to title" && room==rm_title){
 		c=c_dkgray;
 	}
 	else{

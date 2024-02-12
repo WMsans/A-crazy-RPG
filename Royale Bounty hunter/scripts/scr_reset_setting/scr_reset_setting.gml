@@ -8,6 +8,7 @@ function scr_reset_setting(){
 		["Audio",element_type.page_transfer,pages.audio],
 		["Graphics",element_type.page_transfer,pages.graphics],
 		["Controls",element_type.page_transfer,pages.controls],
+		["Restore to Default", element_type.script_runner, scr_reset_setting],
 		["Back to title",element_type.script_runner,scr_rmgoto_title]
 	);
 	ds_audio=scr_create_menu_page(

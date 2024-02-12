@@ -2,7 +2,9 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_block",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -10,8 +12,8 @@
     "path": "folders/Objects/overworld/blocks.yy",
   },
   "parentObjectId": {
-    "name": "obj_par_depthobj",
-    "path": "objects/obj_par_depthobj/obj_par_depthobj.yy",
+    "name": "obj_shadow_caster",
+    "path": "objects/obj_shadow_caster/obj_shadow_caster.yy",
   },
   "persistent": false,
   "physicsAngularDamping": 0.1,

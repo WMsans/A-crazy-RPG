@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "button scripts",
-    "path": "folders/Scripts/button scripts.yy",
+    "path": "folders/Scripts/button_system/button scripts.yy",
   },
 }
