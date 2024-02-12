@@ -7,7 +7,7 @@ if(inputting){
 			var kk = keyboard_lastkey;
 			if(kk != global.keyz){
 				if(kk != ds_grid[# 3, menu_option[page]]){
-					//audio
+					//play sound
 					ds_grid[# 3, menu_option[page]] = kk;
 				}
 				variable_global_set(ds_grid[# 2, menu_option[page]], kk);

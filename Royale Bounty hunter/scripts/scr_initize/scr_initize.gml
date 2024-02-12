@@ -10,7 +10,7 @@ function scr_initize(){
 		scr_loadgame();
 	}
 	scr_itemdata_load();
-	scr_load_setting();
+	scr_init_setting();
 	for(var i=0;i<=global.charanum;i++) global.charahp[i]=global.charamaxhp[i];
 	
 	global.target_x=global.checkpoint_x;

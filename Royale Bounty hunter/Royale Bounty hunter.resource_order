@@ -23,6 +23,7 @@
     {"name":"text system","order":3,"path":"folders/Sprites/text system.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"scr_load_setting","order":2,"path":"scripts/scr_load_setting/scr_load_setting.yy",},
     {"name":"fnt_sidebox2","order":1,"path":"fonts/fnt_sidebox2/fnt_sidebox2.yy",},
     {"name":"obj_skillchange_arrow","order":1,"path":"objects/obj_skillchange_arrow/obj_skillchange_arrow.yy",},
     {"name":"obj_settings","order":4,"path":"objects/obj_settings/obj_settings.yy",},
@@ -35,6 +36,7 @@
     {"name":"scr_layershake","order":1,"path":"scripts/scr_layershake/scr_layershake.yy",},
     {"name":"scr_item_sort","order":3,"path":"scripts/scr_item_sort/scr_item_sort.yy",},
     {"name":"scr_stop_bgm","order":3,"path":"scripts/scr_stop_bgm/scr_stop_bgm.yy",},
+    {"name":"scr_reset_setting","order":1,"path":"scripts/scr_reset_setting/scr_reset_setting.yy",},
     {"name":"scr_play_bgm","order":2,"path":"scripts/scr_play_bgm/scr_play_bgm.yy",},
     {"name":"obj_follower","order":1,"path":"objects/obj_follower/obj_follower.yy",},
     {"name":"spr_item_sidebox","order":2,"path":"sprites/spr_item_sidebox/spr_item_sidebox.yy",},
