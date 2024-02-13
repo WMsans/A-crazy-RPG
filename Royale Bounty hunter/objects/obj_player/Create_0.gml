@@ -1,6 +1,9 @@
 /// @description 
 event_inherited();
+flashalpha=0;
+flashcolor=c_white;
 
+player_vision_in_dark = true;//create a lightsource following the player
 #region state machine
 enum PLAYER_STATES{
 	normal,
@@ -41,6 +44,9 @@ skill_init=1;
 //animation
 initflag=1;
 facing=-1;
+
+//lighting
+if(player_vision_in_dark && instance_exists(obj_lighting_init)){
+	instance_create_depth(x,y,depth,obj_characterlight);
+}
 #endregion
-flashalpha=0;
-flashcolor=c_white;
