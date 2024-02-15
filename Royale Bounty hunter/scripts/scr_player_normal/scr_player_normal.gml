@@ -49,6 +49,7 @@ function scr_player_normal(){
 	y+=vsp;//move the character vir
 	#endregion
 	#region animation
+	sprite_index = spr;
 	if(dirh != 0) image_xscale = dirh;
 	if(hsp == 0 && vsp == 0){
 		image_speed = 0;
@@ -56,7 +57,7 @@ function scr_player_normal(){
 	}else{
 		image_speed = 1;
 	}
-	sprite_index = spr;
+	
 
 	#endregion
 	#region skill

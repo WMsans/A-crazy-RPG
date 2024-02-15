@@ -49,4 +49,18 @@ facing=-1;
 if(player_vision_in_dark && instance_exists(obj_lighting_init)){
 	instance_create_depth(x,y,depth,obj_characterlight);
 }
+
+//follower
+array_size=256;
+for(var i=0;i<array_size;i++){
+	follower_x[i]=x;
+	follower_y[i]=y;
+}
+for(var i=2;i<=global.charanum;i++){
+	global.charainst[i]=instance_create_layer(x,y,"Instances",obj_follower);
+	with(global.charainst[i]){
+		chara_num=i;
+		scr_load_character_spr(i);
+	}
+}
 #endregion

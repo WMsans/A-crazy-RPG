@@ -279,6 +279,7 @@
     {"id":{"name":"spr_box","path":"sprites/spr_box/spr_box.yy",},},
     {"id":{"name":"obj_area_light_demo","path":"objects/obj_area_light_demo/obj_area_light_demo.yy",},},
     {"id":{"name":"obj_directional_light_demo","path":"objects/obj_directional_light_demo/obj_directional_light_demo.yy",},},
+    {"id":{"name":"scr_chara_join_team","path":"scripts/scr_chara_join_team/scr_chara_join_team.yy",},},
     {"id":{"name":"scr_cutscene_end_action","path":"scripts/scr_cutscene_end_action/scr_cutscene_end_action.yy",},},
     {"id":{"name":"cross_product","path":"scripts/cross_product/cross_product.yy",},},
     {"id":{"name":"scr_player_skill","path":"scripts/scr_player_skill/scr_player_skill.yy",},},

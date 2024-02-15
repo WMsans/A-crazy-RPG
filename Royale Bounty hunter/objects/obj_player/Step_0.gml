@@ -14,3 +14,18 @@ if(!instance_exists(obj_fade) && global.gamestate == game_states.init){
 #endregion
 
 script_execute(state_machine[player_state]);
+
+#region character following
+if(hsp!=0||vsp!=0){//player moved, update the state
+	for(var i=array_size-1;i>0;i--){
+		follower_x[i]=follower_x[i-1];
+		follower_y[i]=follower_y[i-1];
+	}
+	follower_x[0]=x;
+	follower_y[0]=y;
+}
+#endregion
+
+if(flashalpha>0){
+	flashalpha-=0.05;
+}
