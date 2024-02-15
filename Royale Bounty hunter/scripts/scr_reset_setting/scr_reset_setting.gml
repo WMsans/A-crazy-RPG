@@ -22,6 +22,7 @@ function scr_reset_setting(){
 		["Back",element_type.page_transfer,pages.main]
 	);
 	ds_control = scr_create_menu_page(
+		["Mouse Sensitivity",		element_type.slider,		scr_change_mouse_sensitivity,1,[0,3]],
 		["UP",			element_type.input,			"keyup",				vk_up],
 		["LEFT",		element_type.input,			"keyleft",  			vk_left],
 		["RIGHT",		element_type.input,			"keyright",				vk_right],

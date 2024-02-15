@@ -62,7 +62,7 @@ for(var yy=0;yy<ds_height;yy++){
 			
 			draw_line_width(rtx,rty,rtx+len,rty,8);
 			draw_circle_color(rtx+circle_pos*len,rty,16,c_white,c,false);
-			draw_text_color(rtx+(1.2*len),rty,string(floor(circle_pos*100))+"%",c,c,c_white,c_white,1);
+			draw_text_color(rtx+(1.2*len),rty,string(floor(current_val*100))+"%",c,c,c_white,c_white,1);
 			
 			break;
 		case element_type.toggle:

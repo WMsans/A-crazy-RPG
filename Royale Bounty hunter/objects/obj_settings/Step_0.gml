@@ -26,7 +26,7 @@ if(inputting){
 			if(menu_option[page]==1) audio_play_sound(snd_txt_init,1,false);
 			var hinput=keyboard_check(global.keyright)-keyboard_check(global.keyleft);
 			if(hinput!=0){
-				ds_grid[# 3,menu_option[page]]=clamp(ds_grid[# 3,menu_option[page]]+hinput*0.01,0,array_length_1d(ds_grid[# 4,menu_option[page]])-1);
+				ds_grid[# 3,menu_option[page]]=clamp(ds_grid[# 3,menu_option[page]]+hinput*0.01,0,ds_grid[# 4,menu_option[page]][1]);
 				script_execute(ds_grid[# 2, menu_option[page]],ds_grid[# 3, menu_option[page]]);
 			}
 			

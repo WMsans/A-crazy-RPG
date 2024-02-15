@@ -27,4 +27,4 @@ if(keyboard_check_pressed(vk_f4)){//全屏切换
 	}
 }
 
-//show_debug_message(string(global.gamestate))
+show_debug_message(string(global.mouse_sensitivity))

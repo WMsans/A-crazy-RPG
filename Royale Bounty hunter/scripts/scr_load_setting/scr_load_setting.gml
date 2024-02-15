@@ -20,6 +20,7 @@ function scr_load_setting(){
 			["Back",element_type.page_transfer,pages.main]
 		);
 		ds_control = scr_create_menu_page(
+			["Mouse Sensitivity",		element_type.slider,		scr_change_mouse_sensitivity,ini_read_real("control","mouse_sensitivity",1),[0,3]],
 			["UP",			element_type.input,			"keyup",				ini_read_real("control","UP",vk_up)],
 			["LEFT",		element_type.input,			"keyleft",  			ini_read_real("control","LEFT",vk_left)],
 			["RIGHT",		element_type.input,			"keyright",	     		ini_read_real("control","RIGHT",vk_right)],
