@@ -80,12 +80,12 @@ if(showing){
 	//draw arrow
 	//selecting
 	if(arrow_selecting==1){//selected nothing but available
-		if(keyboard_check_pressed(global.keydown)){
+		if(input_check(global.keydown, 1)){
 			arrow_pos=(arrow_pos+1)%global.item_num;
 			if(arrow_pos==0) arrow_pos=global.item_num;
 			else yborder_negative_tar=max(0,(arrow_pos-9)*string_height(global.itemdata_name[global.item[arrow_pos]]));//set yborder_negative_tar
 		}
-		if(keyboard_check_pressed(global.keyup)){
+		if(input_check(global.keyup, 1)){
 			arrow_pos--;
 			if(arrow_pos==0){
 				arrow_pos=global.item_num;
@@ -93,16 +93,16 @@ if(showing){
 			}else yborder_negative_tar=max(0,(arrow_pos-9)*string_height(global.itemdata_name[global.item[arrow_pos]]));//set yborder_negative_tar
 			
 		}
-		if(keyboard_check_pressed(global.keyx)){
+		if(input_check(global.keyx, 1)){
 			showing=0;
 		}
-		if(keyboard_check_pressed(global.keyz)){//select one item
+		if(input_check(global.keyz, 1)){//select one item
 			selected_item1=arrow_pos;
 			arrow_selecting=2;
 		}
 		
 	}else if(arrow_selecting==2){//selected one, available
-		if(keyboard_check_pressed(global.keydown)){
+		if(input_check(global.keydown, 1)){
 			arrow_pos++;
 			if(arrow_pos>global.item_num){
 				arrow_pos=1000;
@@ -110,7 +110,7 @@ if(showing){
 				else yborder_negative_tar=max(0,(selected_item1-9)*string_height(global.itemdata_name[global.item[selected_item1]]));//set yborder_negative_tar
 			}else if(arrow_pos!=global.item_num) yborder_negative_tar=max(0,(arrow_pos-9)*string_height(global.itemdata_name[global.item[arrow_pos]]));//set yborder_negative_tar
 		}
-		if(keyboard_check_pressed(global.keyup)){
+		if(input_check(global.keyup, 1)){
 			if(arrow_pos<=global.item_num){
 				arrow_pos--;
 				if(arrow_pos==0) arrow_pos=1;
@@ -121,12 +121,12 @@ if(showing){
 				yborder_negative_tar=max(0,(arrow_pos-10)*string_height(global.itemdata_name[global.item[arrow_pos]]));//set yborder_negative_tar
 			}
 		}
-		if(keyboard_check_pressed(global.keyx)){
+		if(input_check(global.keyx, 1)){
 			arrow_selecting=1;
 			if(arrow_pos>global.item_num) arrow_pos=selected_item1;
 			selected_item1=0;
 		}
-		if(keyboard_check_pressed(global.keyright)){
+		if(input_check(global.keyright, 1)){
 			if(arrow_pos==1000){//跳转到drop
 				arrow_pos=1100;
 			}else{//跳转到use
@@ -135,7 +135,7 @@ if(showing){
 				else yborder_negative_tar=max(0,(selected_item1-9)*string_height(global.itemdata_name[global.item[selected_item1]]));//set yborder_negative_tar
 			}
 		}
-		if(keyboard_check_pressed(global.keyleft)){
+		if(input_check(global.keyleft, 1)){
 			if(arrow_pos==1100){//跳转到use
 				arrow_pos=1000;
 			}else{//跳转到选择的物品处
@@ -145,7 +145,7 @@ if(showing){
 			}
 		}
 		
-		if(keyboard_check_pressed(global.keyz)){
+		if(input_check(global.keyz, 1)){
 			if(arrow_pos==selected_item1){//cancel the select
 				selected_item1=0;
 				arrow_selecting=1;
@@ -179,19 +179,19 @@ if(showing){
 			}
 		}
 	}else if(arrow_selecting==3){//selecting characters
-		if(keyboard_check_pressed(global.keydown)){
+		if(input_check(global.keydown, 1)){
 			arrow_pos=(arrow_pos-2000+1)%global.charanum+2000;
 			if(arrow_pos-2000==0) arrow_pos=global.charanum+2000;
 		}
-		if(keyboard_check_pressed(global.keyup)){
+		if(input_check(global.keyup, 1)){
 			arrow_pos--;
 			if(arrow_pos-2000==0) arrow_pos=global.charanum+2000;
 		}
-		if(keyboard_check_pressed(global.keyx)){
+		if(input_check(global.keyx, 1)){
 			arrow_selecting=2;
 			arrow_pos=selected_item1;
 		}
-		if(keyboard_check_pressed(global.keyz)){//use the item
+		if(input_check(global.keyz, 1)){//use the item
 			showing=0;
 			script_execute(global.itemdata_scr[global.item[selected_item1]],arrow_pos-2000);
 			arrow_selecting=1;
@@ -239,7 +239,7 @@ if(showing){
 }
 
 if(global.item_num){
-	if(keyboard_check_pressed(global.keyc)){//switch states
+	if(input_check(global.keyc, 1)){//switch states
 		if(!showing) showing=1;
 		else showing=0;
 	}

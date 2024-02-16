@@ -15,4 +15,11 @@ enum layers{
 	setting = -300,
 	fade = -400
 }
+enum Input_State{
+	keep, 
+	pressed,
+	released,
+	null,
+	
+}
 }

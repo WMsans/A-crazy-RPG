@@ -36,7 +36,7 @@ function scr_loadgame(){
 	global.keyleft = ini_read_real("control","LEFT",vk_left);
 	global.keyright = ini_read_real("control","RIGHT",vk_right);
 	global.keydown = ini_read_real("control","DOWN",vk_down);
-	global.keyz = ini_read_real("control","CONFIRM",ord("Z"));
+	global.keyz = ini_read_real("control","CONFIRM",ord("Z"));//
 	global.keyx = ini_read_real("control","CANCLE",ord("X"));
 	global.keyc = ini_read_real("control","BACKPACK",ord("C"));
 	global.keya = ini_read_real("control","SKILL",ord("A"));

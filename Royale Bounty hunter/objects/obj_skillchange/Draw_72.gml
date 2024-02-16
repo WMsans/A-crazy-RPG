@@ -1,5 +1,5 @@
 /// @description destroy the object
-if(keyboard_check_released(global.keya)){
+if(input_check(global.keya, 1)){
 	global.charanowskill=_charanowskill;
 	
 	

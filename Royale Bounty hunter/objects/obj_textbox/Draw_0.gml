@@ -1,9 +1,9 @@
 /// @description 
 box_x=camera_get_view_x(view_camera[0]);
 box_y=camera_get_view_y(view_camera[0])+448;
-accept_key=keyboard_check_pressed(global.keyz);
+accept_key=input_check(global.keyz, 1);
 draw_set_alpha(0.75);
-if(!keyboard_check(global.keyz)) pressingz=0;
+if(!input_check(global.keyz, 0)) pressingz=0;
 
 	draw_set_font(fnt_init);
 	draw_set_valign(fa_top);
@@ -131,7 +131,7 @@ if(accept_key){
 			}
 		}
 	}else if(!pressingz) draw_char=text_len[page];//end typing this page
-}else if(keyboard_check_pressed(global.keyx)) draw_char=text_len[page];
+}else if(input_check(global.keyx, 1)) draw_char=text_len[page];
 #endregion
 
 #region draw the box
@@ -189,7 +189,7 @@ else{//print the options
 	draw_set_font(fnt_init);
 	
 	/*selection(old)
-	option_pos+=keyboard_check_pressed(vk_down)-keyboard_check_pressed(vk_up);
+	option_pos+=input_check(vk_down, 1)-input_check(vk_up,1 );
 	option_pos=clamp(option_pos,0,option_num-1);*/
 	
 	//draw arrow
@@ -203,9 +203,9 @@ else{//print the options
 			break;
 		case 2:
 			//selection
-			if(keyboard_check_pressed(global.keyright)||keyboard_check_pressed(global.keyleft)) {
+			if(input_check(global.keyright, 1)||input_check(global.keyleft, 1)) {
 				if(option_pos==0){
-					if(keyboard_check_pressed(global.keyright)) option_pos=2;
+					if(input_check(global.keyright, 1)) option_pos=2;
 					else option_pos=1;
 				}else
 					option_pos=clamp((option_pos+1)%3,1,2);
@@ -230,8 +230,8 @@ else{//print the options
 			}
 			if(1==option_pos){
 				if(!_chosed){
-				if(keyboard_check_pressed(global.keyleft)) {option_pos=3;_chosed=1;}
-				if(keyboard_check_pressed(global.keyright)) {option_pos=2;_chosed=1;}
+				if(input_check(global.keyleft, 1)) {option_pos=3;_chosed=1;}
+				if(input_check(global.keyright, 1)) {option_pos=2;_chosed=1;}
 				}
 				//draw the yellow option
 				draw_text_color(box_x+144+border,box_y+128-string_height(option[0])/2,option[0],c_yellow,c_yellow,c_white,c_white,1);
@@ -240,8 +240,8 @@ else{//print the options
 			}
 			if(2==option_pos){
 				if(!_chosed){
-					if(keyboard_check_pressed(global.keyleft)){option_pos=1;_chosed=1;}
-					if(keyboard_check_pressed(global.keyright)) {option_pos=3;_chosed=1;}
+					if(input_check(global.keyleft, 1)){option_pos=1;_chosed=1;}
+					if(input_check(global.keyright, 1)) {option_pos=3;_chosed=1;}
 				}
 				
 				draw_text_color(box_x+640-string_width(option[1])/2,box_y+128-string_height(option[1])/2,option[1],c_yellow,c_yellow,c_white,c_white,1);
@@ -250,8 +250,8 @@ else{//print the options
 			}
 			if(3==option_pos){
 				if(!_chosed){
-					if(keyboard_check_pressed(global.keyleft)) {option_pos=2;_chosed=1;}
-					if(keyboard_check_pressed(global.keyright)) {option_pos=1;_chosed=1;}
+					if(input_check(global.keyleft,1)) {option_pos=2;_chosed=1;}
+					if(input_check(global.keyright,1)) {option_pos=1;_chosed=1;}
 				}
 				//draw the yellow option
 				draw_text_color(box_x+144+992-string_width(option[2])-border,box_y+128-string_height(option[2])/2,option[2],c_yellow,c_yellow,c_white,c_white,1);
@@ -261,14 +261,14 @@ else{//print the options
 			
 			break;
 		case 4:
-			if(keyboard_check_pressed(global.keyup)){
+			if(input_check(global.keyup, 1)){
 				option_pos=1;
-			}else if(keyboard_check_pressed(global.keydown)){
+			}else if(input_check(global.keydown,1 )){
 				option_pos=2;
 			}
-			if(keyboard_check_pressed(global.keyleft)){
+			if(input_check(global.keyleft,1 )){
 				option_pos=3;
-			}else if(keyboard_check_pressed(global.keyright)){
+			}else if(input_check(global.keyright, 1)){
 				option_pos=4;
 			}
 			

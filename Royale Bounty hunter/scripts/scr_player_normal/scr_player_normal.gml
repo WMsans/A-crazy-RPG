@@ -32,16 +32,16 @@ function scr_player_normal(){
 	hsp=clamp(hsp,-max_sp,max_sp);
 	vsp=clamp(vsp,-max_sp,max_sp);
 	//check the block
-	if(!place_meeting(x,y,obj_block)){
-		if(place_meeting(x+hsp,y,obj_block)){
+	if(!scr_touch_block(x ,y)){
+		if(scr_touch_block(x + hsp, y)){
 			var single=sign(hsp);
-			while(!place_meeting(x+single,y,obj_block)) x+=single;
+			while(!scr_touch_block(x + single, y)) x+=single;
 			hsp=0;
 		}
 
-		if(place_meeting(x,y+vsp,obj_block)){
+		if(scr_touch_block(x, y + vsp)){
 			var single=sign(vsp);
-			while(!place_meeting(x,y+single,obj_block)) y+=single;
+			while(!scr_touch_block(x , y+ single)) y+=single;
 			vsp=0;
 		}
 	}
@@ -62,7 +62,7 @@ function scr_player_normal(){
 	#endregion
 	#region skill
 	if(global.charaskillnum){
-		if(keyboard_check_pressed(global.keyx)&&!skill_cool_timer&&global.charaskillnum&&global.gamestate == game_states.init){
+		if(input_check(global.keyx, 1)&&!skill_cool_timer&&global.charaskillnum&&global.gamestate == game_states.init){
 			player_state=PLAYER_STATES.skill;
 			scr_overworld_chara_skill_spr();
 			skill_cool_timer=skill_cool;

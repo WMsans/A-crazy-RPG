@@ -28,11 +28,11 @@ function scr_player_skill(){
 				
 				
 				var _hsp=(skill_tarx-x)/4;
-				if(place_meeting(x+_hsp,y,obj_block)){
+				if(scr_touch_block(x+_hsp,y)){
 					_wall_flag=1;
-					var _blockid=instance_place(x+_hsp,y,obj_block);
+					var _blockid=scr_place_block(x + _hsp, y);
 					var single=sign(_blockid.x-x);
-					while(place_meeting(x-single,y,obj_block)){
+					while(scr_touch_block(x - single,y)){
 						x+=single;
 					}
 					_hsp=0;
@@ -40,12 +40,12 @@ function scr_player_skill(){
 				x+=_hsp;//move the character hon
 				
 				var _vsp=(skill_tary-y)/4;
-				if(place_meeting(x,y+_vsp,obj_block)){
+				if(scr_touch_block(x,y+_vsp)){
 					_wall_flag=1;
-					var _blockid=instance_place(x,y+_vsp,obj_block);
+					var _blockid = scr_place_block(x + _hsp, y + _vsp);;
 					
 					var single=sign(y-_blockid.y);
-					while(place_meeting(x,y-single,obj_block)){
+					while(scr_touch_block(x ,y- single)){
 						y+=single;
 					}
 					_vsp=0;

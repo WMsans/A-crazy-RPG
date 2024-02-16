@@ -8,7 +8,7 @@ if(global.gamestate == game_states.button){
 		}
 	}else{
 	#region button selection
-	if(keyboard_check_pressed(global.keyup)){
+	if(input_check(global.keyup, 1)){
 		now_selecting.selected = false;
 		var len = array_length(now_selecting_array_y);
 		var pre_selected = noone;
@@ -30,7 +30,7 @@ if(global.gamestate == game_states.button){
 		}
 		now_selecting = pre_selected;
 	}
-	if(keyboard_check_pressed(global.keydown)){
+	if(input_check(global.keydown, 1)){
 		now_selecting.selected = false;
 		var len = array_length(now_selecting_array_y);
 		var pre_selected = noone;
@@ -52,7 +52,7 @@ if(global.gamestate == game_states.button){
 		}
 		now_selecting = pre_selected;
 	}
-	if(keyboard_check_pressed(global.keyleft)){
+	if(input_check(global.keyleft, 1)){
 		now_selecting.selected = false;
 		var len = array_length(now_selecting_array_x);
 		var pre_selected = noone;
@@ -74,7 +74,7 @@ if(global.gamestate == game_states.button){
 		}
 		now_selecting = pre_selected;
 	}
-	if(keyboard_check_pressed(global.keyright)){
+	if(input_check(global.keyright, 1)){
 		now_selecting.selected = false;
 		var len = array_length(now_selecting_array_x);
 		var pre_selected = noone;
@@ -106,7 +106,7 @@ if(global.gamestate == game_states.button){
 	tar_y = now_selecting.y + diry[now_selecting.arrow_placement] * (now_selecting.sprite_height/2 + 20);
 	#endregion
 	
-	if(keyboard_check_pressed(global.keyz)){
+	if(input_check(global.keyz, 1)){
 		with(now_selecting){
 			event_user(0);
 		}

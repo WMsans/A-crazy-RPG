@@ -35,17 +35,17 @@ draw_text(x-sprite_width/2+border,y-sprite_height/2+border,room_get_name(room));
 
 //selection
 if(arrow_pos==0){
-	if(keyboard_check_pressed(global.keydown)||keyboard_check_pressed(global.keyleft)){
+	if(input_check(global.keydown, 1)||input_check(global.keyleft,1 )){
 		arrow_pos=1;
 	}
-	if(keyboard_check_pressed(global.keyright)){
+	if(input_check(global.keyright, 1)){
 		arrow_pos=2;
 	}
 }else if(arrow_pos==1){
-	if(keyboard_check_pressed(global.keyright)){
+	if(input_check(global.keyright, 1)){
 		arrow_pos=2;
 	}
-	if(keyboard_check_pressed(global.keyz)){//Save game
+	if(input_check(global.keyz, 1)){//Save game
 		global.checkpoint_rm=room;
 		global.checkpoint_x=obj_player.x;
 		global.checkpoint_y=obj_player.y;
@@ -55,10 +55,10 @@ if(arrow_pos==0){
 		instance_destroy();
 	}
 }else if(arrow_pos==2){
-	if(keyboard_check_pressed(global.keyleft)){
+	if(input_check(global.keyleft, 1)){
 		arrow_pos=1;
 	}
-	if(keyboard_check_pressed(global.keyz)){//rm goto title
+	if(input_check(global.keyz, 1)){//rm goto title
 		instance_destroy();
 	}
 }

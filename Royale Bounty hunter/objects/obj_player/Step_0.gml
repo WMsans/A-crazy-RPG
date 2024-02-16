@@ -1,10 +1,10 @@
 /// @description 
 #region key check
 if(!instance_exists(obj_fade) && global.gamestate == game_states.init){
-	key_left=keyboard_check(global.keyleft);
-	key_right=keyboard_check(global.keyright);
-	key_down=keyboard_check(global.keydown);
-	key_up=keyboard_check(global.keyup);
+	key_left=input_check(global.keyleft, 0);
+	key_right=input_check(global.keyright, 0);
+	key_down=input_check(global.keydown, 0);
+	key_up=input_check(global.keyup, 0);
 }else{
 	key_left=0;
 	key_right=0;

@@ -3,7 +3,6 @@ function scr_play_bgm(_bgm, _into_len,_loop_len){
 	if(instance_exists(obj_bgm)){
 		obj_bgm.into_new_room = false;
 		if(obj_bgm.bgm_id==_bgm){
-			show_debug_message("wfeohu")
 			return obj_bgm;
 		}
 		return scr_new_bgm(_bgm, _into_len,_loop_len);

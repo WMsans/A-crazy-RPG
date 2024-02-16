@@ -7,11 +7,11 @@ y=box_y+192;
 
 if(arrow_state==1){
 	//choose skill
-	if(keyboard_check_pressed(global.keydown)){
+	if(input_check(global.keydown, 1)){
 		arrow_pos=clamp(arrow_pos+1,1,global.charaskillnum);
 		if(arrow_pos!=global.charaskillnum) yborder_negative_tar=max(0,(arrow_pos-5)*string_height(scr_skill_name(global.charaskill[arrow_pos])));//set yborder_negative_tar
 	}
-	if(keyboard_check_pressed(global.keyup)){
+	if(input_check(global.keyup, 1)){
 		arrow_pos=clamp(arrow_pos-1,1,global.charaskillnum);
 		yborder_negative_tar=max(0,(arrow_pos-5)*string_height(scr_skill_name(global.charaskill[arrow_pos])));//set yborder_negative_tar
 	}

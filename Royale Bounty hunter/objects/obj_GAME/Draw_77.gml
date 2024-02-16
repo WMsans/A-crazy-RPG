@@ -1,6 +1,6 @@
 /// @description setting system
 gpu_set_blendenable(false);
-if(keyboard_check_pressed(global.keyesc)){
+if(input_check(global.keyesc, 1)){
 	if(global.gamestate != game_states.setting){
 		instance_deactivate_all(1);
 		pause_surf=surface_create(resw, resh);
