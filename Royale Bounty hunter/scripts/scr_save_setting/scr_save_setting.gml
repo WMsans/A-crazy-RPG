@@ -20,4 +20,6 @@ function scr_save_setting(){
 	ini_write_real("control","SHIFT",ds_control[# 3 , 10]);
 	ini_write_real("control","CONTROL",ds_control[# 3 , 11]);
 	ini_write_real("control","SPACE",ds_control[# 3 , 12]);
+	
+	ini_close();
 }

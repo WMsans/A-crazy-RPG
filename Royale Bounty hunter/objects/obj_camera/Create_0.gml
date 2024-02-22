@@ -17,3 +17,6 @@ layer_shake_magnitude=ds_list_create();
 layer_shake_remain=ds_list_create();
 layer_shake_layer=ds_list_create();
 buff=16;
+
+hsp = 0;
+vsp = 0;

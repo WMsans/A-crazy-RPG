@@ -13,6 +13,7 @@ function scr_player_normal(){
 	//stop chara from hor
 	if(dirh==0){
 		if(hsp>0){
+			
 			hsp=max(0,hsp+decel);
 		}
 		if(hsp<0){
@@ -33,13 +34,13 @@ function scr_player_normal(){
 	vsp=clamp(vsp,-max_sp,max_sp);
 	//check the block
 	if(!scr_touch_block(x ,y)){
-		if(scr_touch_block(x + hsp, y)){
+		if(scr_line_touch_block(bbox_left, bbox_top, bbox_left + hsp, bbox_top, false) || scr_line_touch_block(bbox_left, bbox_bottom, bbox_left + hsp, bbox_bottom, false) || scr_line_touch_block(bbox_right, bbox_bottom, bbox_right + hsp, bbox_bottom, false) || scr_line_touch_block(bbox_right, bbox_top, bbox_right + hsp, bbox_top, false)){
 			var single=sign(hsp);
 			while(!scr_touch_block(x + single, y)) x+=single;
 			hsp=0;
 		}
 
-		if(scr_touch_block(x, y + vsp)){
+		if(scr_line_touch_block(bbox_left, bbox_top, bbox_left, bbox_top + vsp, false) || scr_line_touch_block(bbox_left, bbox_bottom, bbox_left, bbox_bottom + vsp, false) || scr_line_touch_block(bbox_right, bbox_bottom, bbox_right, bbox_bottom + vsp, false) || scr_line_touch_block(bbox_right, bbox_top, bbox_right, bbox_top + vsp, false)){
 			var single=sign(vsp);
 			while(!scr_touch_block(x , y+ single)) y+=single;
 			vsp=0;
@@ -50,12 +51,14 @@ function scr_player_normal(){
 	#endregion
 	#region animation
 	sprite_index = spr;
-	if(dirh != 0) image_xscale = dirh;
-	if(hsp == 0 && vsp == 0){
+	if(abs(hsp) > 1) image_xscale = sign(hsp);
+	if(hsp == 0 && vsp == 0 && anim_speed_timer % anim_speed_buff == 0){
 		image_speed = 0;
 		image_index = 0;
+		anim_speed_timer = 0;
 	}else{
 		image_speed = 1;
+		anim_speed_timer++;
 	}
 	
 

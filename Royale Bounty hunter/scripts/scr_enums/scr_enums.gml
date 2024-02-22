@@ -13,7 +13,8 @@ enum layers{
 	buttons = -100,
 	UI = -200,
 	setting = -300,
-	fade = -400
+	cursor = -400,
+	fade = -500
 }
 enum Input_State{
 	keep, 

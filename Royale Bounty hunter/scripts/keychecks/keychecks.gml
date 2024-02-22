@@ -288,6 +288,24 @@ if key = (vk_decimal)
     return "Decimal";
 }
 
+//Left Mouse Button
+if key = (mb_left)
+{
+	return "Left Mouse Button";
+}
+
+//Right Mouse Button
+if key = (mb_right)
+{
+	return "Right Mouse Button";
+}
+
+//Mid Mouse Button
+if key = (mb_middle)
+{
+	return "Mid Mouse Button";
+}
+
 // Printable characters.
 return chr(key);
 }

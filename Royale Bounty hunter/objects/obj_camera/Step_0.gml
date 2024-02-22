@@ -37,5 +37,8 @@ if(view_w_half * 2 + buff < room_width || view_h_half * 2 + buff < room_height){
 	y = clamp(y+(yTo-y)/cam_speed, view_h_half + buff, room_height-view_h_half - buff);
 }
 
+hsp = x - xprevious;
+vsp = y - yprevious;
+
 //Update cam pos
 camera_set_view_pos(cam,x-view_w_half,y-view_h_half);

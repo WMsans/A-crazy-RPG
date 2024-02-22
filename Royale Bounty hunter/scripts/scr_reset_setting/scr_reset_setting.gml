@@ -32,7 +32,7 @@ function scr_reset_setting(){
 		["BACKPACK",	element_type.input,			"keyc",					ord("C")],
 		["SKILL",		element_type.input,			"keya",					ord("A")],
 		["ESCAPE",		element_type.input,			"keyesc",				vk_escape],
-		["SHIFT",		element_type.input,			"keyshift",				vk_shift],
+		["WALK",		element_type.input,			"keyshift",				vk_shift],
 		["CONTROL",		element_type.input,			"keyctrl",				vk_control],
 		["SPACE",		element_type.input,			"keyspace",				vk_space],
 		["Back",		element_type.page_transfer,	pages.main],

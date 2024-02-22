@@ -1,7 +1,7 @@
 function input_check(input, state){
 	var _ans = false;
 	var _mouse = false;
-	//if(input == mb_left || input == mb_right || input == mb_middle) _mouse = true;
+	if(input == mb_left || input == mb_right || input == mb_middle) _mouse = true;
 	if(state == Input_State.keep){
 		if(_mouse){
 			if(mouse_check_button(input)) _ans = true;

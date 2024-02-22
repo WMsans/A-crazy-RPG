@@ -1,7 +1,6 @@
 function scr_initize(){
 	randomize();
 	scr_enums();
-	window_set_cursor(cr_none);
 	global.gamestate = game_states.init;
 	global.gamestate_last = -1;
 	global.checkpoint_id = noone;
@@ -29,6 +28,8 @@ function scr_initize(){
 	
 	scr_chara_join_team("Jack", 100, 7, 4, 2);
 	#endregion
+	
+	instance_create_depth(-999,-999,0,obj_mouse_follow);
 	instance_create_depth(-999,-999,0,obj_GAME);
 	scr_fadeout(rm_title, global.target_x, global.target_y);
 }

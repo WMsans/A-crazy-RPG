@@ -30,7 +30,7 @@ function scr_cutscene_move_chara(_obj,_tarx,_tary,_relative,_spd){
 			
 			//animate sprite
 			#region sprite animation
-			var _name=object_get_name(id);
+			var _name=object_get_name(object_index );
 			if(_name=="obj_player"||_name=="obj_follower"){
 				if(ldirx !=0) image_xscale = sign(ldirx);
 				if(ldirx==0&&ldiry==0){//player stay still
@@ -43,7 +43,7 @@ function scr_cutscene_move_chara(_obj,_tarx,_tary,_relative,_spd){
 			#endregion
 		}else{
 			//animate sprite
-			var _name=object_get_name(id);
+			var _name=object_get_name(object_index);
 			if(_name=="obj_player"||_name=="obj_follower"){
 				if(ldirx != 0) image_xscale = sign(ldirx);
 			}

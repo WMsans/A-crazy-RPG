@@ -30,8 +30,8 @@ function scr_load_setting(){
 			["BACKPACK",	element_type.input,			"keyc",					ini_read_real("control","BACKPACK",ord("C"))],
 			["SKILL",		element_type.input,			"keya",					ini_read_real("control","SKILL",ord("A"))],
 			["ESCAPE",		element_type.input,			"keyesc",				ini_read_real("control","ESCAPE",vk_escape)],
-			["SHIFT",		element_type.input,			"keyshift",				ini_read_real("control","SHIFT",vk_shift)],
-			["CONTROL",		element_type.input,			"keyctrl",				ini_read_real("control","CONTROL",vk_control)],
+			["WALK",		element_type.input,			"keyshift",				ini_read_real("control","SHIFT",vk_shift)],
+			["RUN",			element_type.input,			"keyctrl",				ini_read_real("control","CONTROL",vk_control)],
 			["SPACE",		element_type.input,			"keyspace",				ini_read_real("control","SPACE",vk_space)],
 			["Back",		element_type.page_transfer,	pages.main],
 		);

@@ -44,6 +44,8 @@ skill_init=1;
 //animation
 initflag=1;
 facing=-1;
+anim_speed_buff = 30;
+anim_speed_timer = 0;
 
 //lighting
 if(player_vision_in_dark && instance_exists(obj_lighting_init)){
