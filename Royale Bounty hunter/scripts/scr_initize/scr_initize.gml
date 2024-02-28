@@ -21,12 +21,30 @@ function scr_initize(){
 	
 	#region debug
 	global.debug = 1;
+	global.backpacksize = 999;
 	scr_item_add(1);
 	scr_item_add(2);
+	scr_item_add(1);
+	scr_item_add(2);
+	scr_item_add(1);
+	scr_item_add(2);
+	scr_item_add(1);
+	scr_item_add(2);
+	scr_item_add(1);
+	scr_item_add(2);
+	scr_item_add(1);
+	scr_item_add(2);
+	scr_item_add(1);
+	scr_item_add(2);
+	scr_item_add(1);
+	scr_item_add(2);
+	scr_item_add(1);
+	scr_item_add(2);
+	
 	scr_skill_add(1);
 	scr_skill_add(1);
 	
-	scr_chara_join_team("Jack", 100, 7, 4, 2);
+	scr_chara_join_team("Jack", 100, 5, 4, 2);
 	#endregion
 	
 	instance_create_depth(-999,-999,0,obj_mouse_follow);

@@ -10,7 +10,7 @@ showing=0;
 last_showing = showing;
 arrow_pos=1;
 arrow_tarx=0;
-arrow_tary=0;
+arrow_tary=42 + border + 24;
 arrow_img=0;
 arrow_selecting=1;
 selected_item1=0;
@@ -53,5 +53,6 @@ for(var i=1;i<=global.charanum;i++){
 	chara_tarposx[i]=288+box_x+border;
 }
 
-
+mouse_deltv = 0;
+mouse_delth = 0;
 #endregion

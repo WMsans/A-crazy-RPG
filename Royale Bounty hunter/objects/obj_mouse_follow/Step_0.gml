@@ -1,6 +1,6 @@
 /// @description 
-var mouse_hsp = window_mouse_get_delta_x() * global.mouse_sensitivity;
-var mouse_vsp = window_mouse_get_delta_y() * global.mouse_sensitivity;
+mouse_hsp = window_mouse_get_delta_x() * global.mouse_sensitivity;
+mouse_vsp = window_mouse_get_delta_y() * global.mouse_sensitivity;
 if(instance_exists(obj_player) && global.gamestate == game_states.init && !instance_exists(obj_fade)){
 		
 	if(input_check(global.keyshift, 0)){
@@ -42,12 +42,12 @@ if(instance_exists(obj_player) && global.gamestate == game_states.init && !insta
 			key_down=0;
 			key_up=0;
 			
-			hsp = mouse_hsp;
-			vsp = mouse_vsp;
+			hsp = other.mouse_hsp;
+			vsp = other.mouse_vsp;
 		
 		}
 	}
-}else if (instance_exists(obj_player) && global.gamestate == game_states.cutscene){
+}else if (instance_exists(obj_player)  && !instance_exists(obj_fade)){
 	cursor_showing = false;
 	ori_flag = true;
 	with(obj_player){

@@ -4,6 +4,9 @@ window_mouse_set_locked(true);
 x = -999;
 y = -999;
 
+mouse_hsp = 0;
+mouse_vsp = 0;
+
 #region player
 ori_flag = true;
 
