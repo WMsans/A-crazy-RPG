@@ -55,3 +55,6 @@ sound_ct=sound_delay;
 
 pressingz=1;
 savebox=0;
+
+mouse_delth = 0;
+mouse_deltv = 0;

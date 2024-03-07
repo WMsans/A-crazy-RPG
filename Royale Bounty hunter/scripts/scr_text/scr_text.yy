@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_text",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "text system",
-    "path": "folders/Scripts/text system.yy",
+  "$GMScript":"",
+  "%Name":"scr_text",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_text",
+  "parent":{
+    "name":"text system",
+    "path":"folders/Scripts/text system.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

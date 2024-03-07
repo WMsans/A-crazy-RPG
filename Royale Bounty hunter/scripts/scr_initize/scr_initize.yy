@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_initize",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "initialize",
-    "path": "folders/Scripts/initialize.yy",
+  "$GMScript":"",
+  "%Name":"scr_initize",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_initize",
+  "parent":{
+    "name":"initialize",
+    "path":"folders/Scripts/initialize.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

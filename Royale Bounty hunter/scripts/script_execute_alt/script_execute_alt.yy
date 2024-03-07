@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "script_execute_alt",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "basic",
-    "path": "folders/Scripts/basic.yy",
+  "$GMScript":"",
+  "%Name":"script_execute_alt",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"script_execute_alt",
+  "parent":{
+    "name":"basic",
+    "path":"folders/Scripts/basic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

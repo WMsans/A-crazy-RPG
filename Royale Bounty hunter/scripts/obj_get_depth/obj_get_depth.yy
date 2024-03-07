@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"obj_get_depth",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"obj_get_depth",
+  "parent":{
+    "name":"object",
+    "path":"folders/Scripts/Breakable/object.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

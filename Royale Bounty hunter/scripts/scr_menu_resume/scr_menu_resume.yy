@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_menu_resume",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Setting",
-    "path": "folders/Scripts/Setting.yy",
+  "$GMScript":"",
+  "%Name":"scr_menu_resume",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_menu_resume",
+  "parent":{
+    "name":"Setting",
+    "path":"folders/Scripts/Setting.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

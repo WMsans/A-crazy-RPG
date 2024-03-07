@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "keychecks",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Setting",
-    "path": "folders/Scripts/Setting.yy",
+  "$GMScript":"",
+  "%Name":"keychecks",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"keychecks",
+  "parent":{
+    "name":"Setting",
+    "path":"folders/Scripts/Setting.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -10,6 +10,7 @@ function scr_resetgame(){
 		global.item[i]=0;
 	}
 	
+	
 	global.plot=1;
 	
 	global.charanum=1;

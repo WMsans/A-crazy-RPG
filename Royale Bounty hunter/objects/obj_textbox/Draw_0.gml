@@ -2,12 +2,14 @@
 box_x=camera_get_view_x(view_camera[0]);
 box_y=camera_get_view_y(view_camera[0])+448;
 accept_key=input_check(global.keyz, 1);
+mouse_deltv = scr_get_mouse_delty();
+mouse_delth = scr_get_mouse_deltx();
 draw_set_alpha(0.75);
 if(!input_check(global.keyz, 0)) pressingz=0;
 
-	draw_set_font(fnt_init);
-	draw_set_valign(fa_top);
-	draw_set_halign(fa_left);
+draw_set_font(fnt_init);
+draw_set_valign(fa_top);
+draw_set_halign(fa_left);
 #region setup
 if(!setup){
 	if(!allow_move) global.gamestate = game_states.cutscene;
@@ -193,8 +195,9 @@ else{//print the options
 	option_pos=clamp(option_pos,0,option_num-1);*/
 	
 	//draw arrow
-	if(!instance_exists(obj_textbox_arrow))
+	if(!instance_exists(obj_textbox_arrow)){
 		instance_create_depth(-999,-999,layers.UI - 1,obj_textbox_arrow);
+	}
 	#region draw options
 	var _chosed=0;
 	switch(option_num){//how many options are there

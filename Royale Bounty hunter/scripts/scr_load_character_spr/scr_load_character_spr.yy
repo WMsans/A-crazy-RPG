@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_load_character_spr",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "follower",
-    "path": "folders/Scripts/follower.yy",
+  "$GMScript":"",
+  "%Name":"scr_load_character_spr",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_load_character_spr",
+  "parent":{
+    "name":"follower",
+    "path":"folders/Scripts/follower.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

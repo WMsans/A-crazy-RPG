@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_roomcode",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "initialize",
-    "path": "folders/Scripts/initialize.yy",
+  "$GMScript":"",
+  "%Name":"scr_roomcode",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_roomcode",
+  "parent":{
+    "name":"initialize",
+    "path":"folders/Scripts/initialize.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "polygon_from_instance",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Misc",
-    "path": "folders/Scripts/Lighting/Misc.yy",
+  "$GMScript":"",
+  "%Name":"polygon_from_instance",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"polygon_from_instance",
+  "parent":{
+    "name":"Misc",
+    "path":"folders/Scripts/Lighting/Misc.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

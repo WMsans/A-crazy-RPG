@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_get_mouse_delty",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "mouse",
-    "path": "folders/Scripts/mouse.yy",
+  "$GMScript":"",
+  "%Name":"scr_get_mouse_delty",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_get_mouse_delty",
+  "parent":{
+    "name":"mouse",
+    "path":"folders/Scripts/mouse.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

@@ -7,7 +7,7 @@ function scr_loadgame(){
 		
 		global.item_num=ini_read_real("item","num",0);
 		global.backpacksize=ini_read_real("item","backpacksize",8);
-		for(var i = 1;i <= global.backpacksize;i ++){
+		for(var i = 1;i <= global.item_num;i ++){
 			global.item[i] = ini_read_real("item","item" + string(i),0);
 		}
 		

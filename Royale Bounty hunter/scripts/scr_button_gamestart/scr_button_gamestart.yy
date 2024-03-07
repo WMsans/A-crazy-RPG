@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_button_gamestart",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "button scripts",
-    "path": "folders/Scripts/button_system/button scripts.yy",
+  "$GMScript":"",
+  "%Name":"scr_button_gamestart",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_button_gamestart",
+  "parent":{
+    "name":"button scripts",
+    "path":"folders/Scripts/button_system/button scripts.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

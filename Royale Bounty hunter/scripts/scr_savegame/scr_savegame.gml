@@ -9,7 +9,7 @@ function scr_savegame(){
 	
 	ini_write_real("item","num",global.item_num);
 	ini_write_real("item","backpacksize",global.backpacksize);
-	for(var i = 1;i <= global.backpacksize;i ++){
+	for(var i = 1;i <= global.item_num;i ++){
 		ini_write_real("item","item" + string(i),global.item[i]);
 	}
 	

@@ -1,7 +1,7 @@
 /// @description 
 mouse_hsp = window_mouse_get_delta_x() * global.mouse_sensitivity;
 mouse_vsp = window_mouse_get_delta_y() * global.mouse_sensitivity;
-if(instance_exists(obj_player) && global.gamestate == game_states.init && !instance_exists(obj_fade)){
+if(instance_exists(obj_player) && global.gamestate == game_states.init && !instance_exists(obj_fade)&& !(instance_exists(obj_textbox) && obj_textbox.chosing == 1)){
 		
 	if(input_check(global.keyshift, 0)){
 		if(!ori_flag){

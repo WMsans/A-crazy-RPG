@@ -3,6 +3,7 @@ if(global.gamestate != game_states.setting) exit;
 draw_set_font(fnt_init);
 draw_set_color(c_white);
 
+mouse_change_dis = string_height("K");
 var ds_grid=ds_menu_pages[page],ds_height=ds_grid_height(ds_grid);
 var x_buffer=32,y_buffer=string_height("K");
 var start_y=y-((((ds_height-1)/2)*y_buffer)),start_x=x;

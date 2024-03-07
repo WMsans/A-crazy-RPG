@@ -8,7 +8,12 @@ if(global.gamestate == game_states.button){
 		}
 	}else{
 	#region button selection
-	if(input_check(global.keyup, 1)){
+	mouse_delth = scr_get_mouse_deltx();
+	mouse_deltv = scr_get_mouse_delty();
+	mouse_delth_sum += mouse_delth;
+	mouse_deltv_sum += mouse_deltv;
+	if(input_check(global.keyup, 1) || mouse_deltv_sum < -mouse_change_dis){
+		mouse_deltv_sum = 0;
 		now_selecting.selected = false;
 		var len = array_length(now_selecting_array_y);
 		var pre_selected = noone;
@@ -30,7 +35,8 @@ if(global.gamestate == game_states.button){
 		}
 		now_selecting = pre_selected;
 	}
-	if(input_check(global.keydown, 1)){
+	if(input_check(global.keydown, 1) ||  mouse_deltv_sum > mouse_change_dis){
+		mouse_deltv_sum = 0;
 		now_selecting.selected = false;
 		var len = array_length(now_selecting_array_y);
 		var pre_selected = noone;
@@ -52,29 +58,31 @@ if(global.gamestate == game_states.button){
 		}
 		now_selecting = pre_selected;
 	}
-	if(input_check(global.keyleft, 1)){
+	if(input_check(global.keyleft, 1) || mouse_delth_sum > mouse_change_dis){
+		mouse_delth_sum = 0;
 		now_selecting.selected = false;
 		var len = array_length(now_selecting_array_x);
 		var pre_selected = noone;
 		var flag = false;
 		for(var i = (array_get_index(now_selecting_array_x, now_selecting) + 1) % len; now_selecting_array_x[i] != now_selecting; i = (i+1) % len){
-			if(!flag && abs(now_selecting_array_x[i].x - now_selecting.x) > 0.5){
+			if(!flag && abs(now_selecting_array_x[i].x - now_selecting.x) > 1){
 				flag = true;
 				pre_selected = now_selecting_array_x[i];
 			}
 			if(flag){
-				if(abs(now_selecting_array_x[i].x - pre_selected.x) > 0.5) break;
+				if(abs(now_selecting_array_x[i].x - pre_selected.x) > 1) break;
 				if(scr_get_instance_distance(pre_selected, now_selecting) > scr_get_instance_distance(now_selecting_array_x[i], now_selecting)){
 					pre_selected = now_selecting_array_x[i];
 				}
 			}
 		}
 		if(pre_selected == noone){//都在同一列
-			pre_selected = now_selecting_array_y[(array_get_index(now_selecting_array_y, now_selecting) - 1) < 0 ? array_length(now_selecting_array_y)-1 : (array_get_index(now_selecting_array_y, now_selecting) - 1)];
+			pre_selected = now_selecting ;//now_selecting_array_y[(array_get_index(now_selecting_array_y, now_selecting) - 1) < 0 ? array_length(now_selecting_array_y)-1 : (array_get_index(now_selecting_array_y, now_selecting) - 1)]
 		}
 		now_selecting = pre_selected;
 	}
-	if(input_check(global.keyright, 1)){
+	if(input_check(global.keyright, 1) || mouse_delth_sum < -mouse_change_dis){
+		mouse_delth_sum = 0;
 		now_selecting.selected = false;
 		var len = array_length(now_selecting_array_x);
 		var pre_selected = noone;
@@ -92,7 +100,7 @@ if(global.gamestate == game_states.button){
 			}
 		}
 		if(pre_selected == noone){//都在同一行
-			pre_selected = now_selecting_array_y[(array_get_index(now_selecting_array_y, now_selecting) + 1) % array_length(now_selecting_array_y)];
+			pre_selected = now_selecting;//now_selecting_array_y[(array_get_index(now_selecting_array_y, now_selecting) + 1) % array_length(now_selecting_array_y)]
 		}
 		now_selecting = pre_selected;
 	}
@@ -102,8 +110,8 @@ if(global.gamestate == game_states.button){
 	tar_dir = (now_selecting.arrow_placement+1) % 4 * -90;
 	var dirx = [1, 0, -1 , 0];
 	var diry = [0, 1, 0, -1];
-	tar_x = now_selecting.x + dirx[now_selecting.arrow_placement] * (now_selecting.sprite_width/2 + 20);
-	tar_y = now_selecting.y + diry[now_selecting.arrow_placement] * (now_selecting.sprite_height/2 + 20);
+	tar_x = now_selecting.x + dirx[now_selecting.arrow_placement] * (now_selecting.sprite_width/2 + 20) + mouse_delth_sum;
+	tar_y = now_selecting.y + diry[now_selecting.arrow_placement] * (now_selecting.sprite_height/2 + 20) + mouse_deltv_sum;
 	#endregion
 	
 	if(input_check(global.keyz, 1)){

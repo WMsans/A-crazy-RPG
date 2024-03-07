@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_fadein",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "basic",
-    "path": "folders/Scripts/basic.yy",
+  "$GMScript":"",
+  "%Name":"scr_fadein",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_fadein",
+  "parent":{
+    "name":"basic",
+    "path":"folders/Scripts/basic.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

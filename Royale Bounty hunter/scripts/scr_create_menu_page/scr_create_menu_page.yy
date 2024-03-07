@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_create_menu_page",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Setting",
-    "path": "folders/Scripts/Setting.yy",
+  "$GMScript":"",
+  "%Name":"scr_create_menu_page",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_create_menu_page",
+  "parent":{
+    "name":"Setting",
+    "path":"folders/Scripts/Setting.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

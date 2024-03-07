@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_breakable_hit",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_breakable_hit",
+  "parent":{
+    "name":"Breakable",
+    "path":"folders/Scripts/Breakable.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

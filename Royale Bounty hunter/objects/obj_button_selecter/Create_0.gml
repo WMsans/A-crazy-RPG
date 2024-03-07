@@ -34,3 +34,9 @@ for(var i = 0; i < group_size ; i++){
 	key = ds_map_find_next(button_groups_by_y, key);
 }
 #endregion
+
+mouse_delth = 0;
+mouse_deltv = 0;
+mouse_delth_sum = 0;
+mouse_deltv_sum = 0;
+mouse_change_dis = 64;

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_chara_join_team",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "follower",
-    "path": "folders/Scripts/follower.yy",
+  "$GMScript":"",
+  "%Name":"scr_chara_join_team",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_chara_join_team",
+  "parent":{
+    "name":"follower",
+    "path":"folders/Scripts/follower.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }

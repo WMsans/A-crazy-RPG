@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "scr_skill_name",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "skill system",
-    "path": "folders/Scripts/skill system.yy",
+  "$GMScript":"",
+  "%Name":"scr_skill_name",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_skill_name",
+  "parent":{
+    "name":"skill system",
+    "path":"folders/Scripts/skill system.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
