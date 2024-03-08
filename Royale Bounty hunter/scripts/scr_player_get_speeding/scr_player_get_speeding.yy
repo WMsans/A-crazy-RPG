@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scr_player_get_speeding",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_player_get_speeding",
+  "parent":{
+    "name":"basic",
+    "path":"folders/Scripts/basic.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

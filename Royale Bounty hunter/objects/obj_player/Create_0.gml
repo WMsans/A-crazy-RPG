@@ -65,4 +65,7 @@ for(var i=2;i<=global.charanum;i++){
 		scr_load_character_spr(i);
 	}
 }
+
+//block hit
+hit_blocks = ds_list_create();
 #endregion

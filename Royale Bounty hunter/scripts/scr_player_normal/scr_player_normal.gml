@@ -37,17 +37,35 @@ function scr_player_normal(){
 		if(scr_line_touch_block(bbox_left, bbox_top, bbox_left + hsp, bbox_top, false) || scr_line_touch_block(bbox_left, bbox_bottom, bbox_left + hsp, bbox_bottom, false) || scr_line_touch_block(bbox_right, bbox_bottom, bbox_right + hsp, bbox_bottom, false) || scr_line_touch_block(bbox_right, bbox_top, bbox_right + hsp, bbox_top, false)){
 			var single=sign(hsp);
 			while(!scr_touch_block(x + single, y)) x+=single;
+			if(scr_player_get_speeding()){
+				if(ds_list_find_index(hit_blocks, scr_place_block(x + single, y)) == -1){
+					ds_list_add(hit_blocks, scr_place_block(x + single, y));
+				}
+			}
 			hsp=0;
 		}
 
 		if(scr_line_touch_block(bbox_left, bbox_top, bbox_left, bbox_top + vsp, false) || scr_line_touch_block(bbox_left, bbox_bottom, bbox_left, bbox_bottom + vsp, false) || scr_line_touch_block(bbox_right, bbox_bottom, bbox_right, bbox_bottom + vsp, false) || scr_line_touch_block(bbox_right, bbox_top, bbox_right, bbox_top + vsp, false)){
 			var single=sign(vsp);
 			while(!scr_touch_block(x , y+ single)) y+=single;
+			if(scr_player_get_speeding()){
+				if(ds_list_find_index(hit_blocks, scr_place_block(x , y+ single)) == -1){
+					ds_list_add(hit_blocks, scr_place_block(x , y+ single));
+				}
+			}
 			vsp=0;
 		}
 	}
 	x+=hsp;//move the character hon
 	y+=vsp;//move the character vir
+	#endregion
+	#region Hit blocks
+	for(var i = 0; i < ds_list_size(hit_blocks);i++){
+		with(hit_blocks[| i]){
+			scr_breakable_hit();
+		}
+	}
+	ds_list_clear(hit_blocks);
 	#endregion
 	#region animation
 	sprite_index = spr;
