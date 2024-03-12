@@ -1,3 +1,4 @@
+scr_fadein();
 global.gamestate = game_states.button;
 if(instance_exists(obj_bgm)){
 	obj_bgm.into_new_room = true;

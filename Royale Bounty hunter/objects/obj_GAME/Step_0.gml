@@ -12,7 +12,7 @@ if(global.gamestate == game_states.button){
 
 if(input_check(global.keya, 1)&&global.gamestate == game_states.init){
 	if(!instance_exists(obj_skillchange)) instance_create_depth(-999,-999,layers.UI,obj_skillchange);
-
+	
 }
 
 if(input_check(vk_f4, 1)){//全屏切换

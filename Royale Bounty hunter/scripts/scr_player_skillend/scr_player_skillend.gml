@@ -15,5 +15,8 @@ switch(global.charaskill[global.charanowskill]){
 			}
 			#endregion
 			break;
+		case 2://Alex: 挥拳
+			player_state=PLAYER_STATES.normal;
+			break;
 	}
 }

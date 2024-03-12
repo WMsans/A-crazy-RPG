@@ -21,8 +21,8 @@ if(instance_exists(obj_player) && global.gamestate == game_states.init && !insta
 	
 		var p_d = point_direction(obj_player.x, obj_player.y, cursor_x, cursor_y);
 		
-		obj_player.hsp = lengthdir_x(obj_player.max_sp * sqrt(2), p_d);
-		obj_player.vsp = lengthdir_y(obj_player.max_sp * sqrt(2), p_d);
+		obj_player.hsp = clamp((cursor_x - obj_player.x)/3, -abs(lengthdir_x(obj_player.max_sp * sqrt(2), p_d)), abs(lengthdir_x(obj_player.max_sp * sqrt(2), p_d)));
+		obj_player.vsp = clamp((cursor_y - obj_player.y)/3, -abs(lengthdir_y(obj_player.max_sp * sqrt(2), p_d)), abs(lengthdir_y(obj_player.max_sp * sqrt(2), p_d)));
 	}else{
 		cursor_showing = false;
 		

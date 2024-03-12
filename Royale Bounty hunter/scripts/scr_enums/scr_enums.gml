@@ -10,11 +10,13 @@ enum game_states{
 }
 enum layers{
 	overworld = 0,
-	buttons = -100,
-	UI = -200,
-	setting = -300,
-	cursor = -400,
-	fade = -500
+	lighting = -50,
+	downwall = -200,
+	buttons = -300,
+	UI = -400,
+	setting = -500,
+	cursor = -600,
+	fade = -700
 }
 enum Input_State{
 	keep, 

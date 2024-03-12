@@ -61,5 +61,9 @@ function scr_player_skill(){
 			}
 			
 			break;
+		case 2://Alex: 挥拳
+			instance_create_depth(x,y, depth-1,obj_slash);
+			scr_player_skillend();
+			break;
 	}
 }

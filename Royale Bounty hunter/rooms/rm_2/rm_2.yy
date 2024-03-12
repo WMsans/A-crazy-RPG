@@ -19,8 +19,8 @@
   ],
   "name":"rm_2",
   "parent":{
-    "name":"standard rooms",
-    "path":"folders/Rooms/standard rooms.yy",
+    "name":"Standard rooms",
+    "path":"folders/Rooms/Debug/Standard rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

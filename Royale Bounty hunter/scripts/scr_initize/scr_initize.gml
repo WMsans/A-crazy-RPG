@@ -20,7 +20,13 @@ function scr_initize(){
 	global.expecting_textblock_y=-999;
 	
 	#region debug
-	global.debug = 1;
+	global.checkpoint_rm=rm_lab1;//first room of the game
+	global.checkpoint_x=288;
+	global.checkpoint_y=336;
+	global.target_x=global.checkpoint_x;
+	global.target_y=global.checkpoint_y;
+	
+	global.debug = 0;
 	global.backpacksize = 999;
 	scr_item_add(1);
 	scr_item_add(2);
@@ -42,7 +48,7 @@ function scr_initize(){
 	scr_item_add(2);
 	
 	scr_skill_add(1);
-	scr_skill_add(1);
+	scr_skill_add(2);
 	
 	scr_chara_join_team("Jack", 100, 5, 4, 2);
 	#endregion

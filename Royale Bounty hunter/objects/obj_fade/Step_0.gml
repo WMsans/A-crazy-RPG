@@ -7,3 +7,4 @@ if(fadeout){
 	if(a==0) instance_destroy();
 }
 
+//show_debug_message(string(fadeout))

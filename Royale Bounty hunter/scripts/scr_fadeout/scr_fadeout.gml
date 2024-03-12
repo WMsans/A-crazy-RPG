@@ -1,7 +1,7 @@
 ///@function scr_fadeout(target room);To fade to another room
 ///@param {index) _targetroom
-///param {integer} _target_x
-///param {integer} _target_y
+///@param {integer} _target_x
+///@param {integer} _target_y
 function scr_fadeout(_targetroom,_target_x,_target_y){
 	global.target_x=_target_x;
 	global.target_y=_target_y;

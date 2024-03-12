@@ -254,8 +254,8 @@
   ],
   "name":"rm_lighting_demo_many",
   "parent":{
-    "name":"Demo",
-    "path":"folders/Rooms/Demo.yy",
+    "name":"Lighting",
+    "path":"folders/Rooms/Debug/Lighting.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

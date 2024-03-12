@@ -5,6 +5,7 @@ draw_set_color(c_white);
 draw_set_valign(fa_top);
 draw_set_halign(fa_left);
 draw_sprite(spr_skill_mainbox,0,x,y);
+show_debug_message(string(x))
 
 var _yborder=42-yborder_negative ;
 yborder_negative+=(yborder_negative_tar-yborder_negative)/5;

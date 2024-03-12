@@ -1,5 +1,5 @@
 /// @description destroy the object
-if(input_check(global.keya, 1)){
+if(input_check(global.keya, Input_State.released)){
 	global.charanowskill=_charanowskill;
 	
 	

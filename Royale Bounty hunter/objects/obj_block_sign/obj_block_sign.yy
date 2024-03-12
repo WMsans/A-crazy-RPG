@@ -9,8 +9,8 @@
   "name":"obj_block_sign",
   "overriddenProperties":[],
   "parent":{
-    "name":"signs",
-    "path":"folders/Objects/overworld/blocks/signs.yy",
+    "name":"blocks",
+    "path":"folders/Objects/overworld/blocks.yy",
   },
   "parentObjectId":{
     "name":"obj_block",

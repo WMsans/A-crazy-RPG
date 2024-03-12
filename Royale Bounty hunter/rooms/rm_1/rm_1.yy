@@ -6,6 +6,8 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
+    {"name":"inst_693F7B13","path":"rooms/rm_1/rm_1.yy",},
+    {"name":"inst_68501DB5","path":"rooms/rm_1/rm_1.yy",},
     {"name":"inst_28B87203","path":"rooms/rm_1/rm_1.yy",},
     {"name":"inst_695A679E","path":"rooms/rm_1/rm_1.yy",},
     {"name":"inst_5BC73BD","path":"rooms/rm_1/rm_1.yy",},
@@ -28,8 +30,6 @@
     {"name":"inst_5B312973","path":"rooms/rm_1/rm_1.yy",},
     {"name":"inst_3DC56B31","path":"rooms/rm_1/rm_1.yy",},
     {"name":"inst_66C126B8","path":"rooms/rm_1/rm_1.yy",},
-    {"name":"inst_68501DB5","path":"rooms/rm_1/rm_1.yy",},
-    {"name":"inst_693F7B13","path":"rooms/rm_1/rm_1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -63,8 +63,8 @@
   ],
   "name":"rm_1",
   "parent":{
-    "name":"standard rooms",
-    "path":"folders/Rooms/standard rooms.yy",
+    "name":"Standard rooms",
+    "path":"folders/Rooms/Debug/Standard rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

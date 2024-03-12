@@ -78,7 +78,9 @@ function scr_player_normal(){
 		image_speed = 1;
 		anim_speed_timer++;
 	}
-	
+	if(hsp != 0 || vsp != 0){
+		facing_angle = point_direction(0,0,hsp, vsp);
+	}
 
 	#endregion
 	#region skill

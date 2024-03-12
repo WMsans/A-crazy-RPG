@@ -40,8 +40,8 @@
   ],
   "name":"rm_lighting_demo_single_directional",
   "parent":{
-    "name":"Demo",
-    "path":"folders/Rooms/Demo.yy",
+    "name":"Lighting",
+    "path":"folders/Rooms/Debug/Lighting.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
