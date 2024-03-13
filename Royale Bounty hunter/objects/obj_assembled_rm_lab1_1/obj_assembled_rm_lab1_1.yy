@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_assembled_downwall2",
+  "%Name":"obj_assembled_rm_lab1_1",
   "eventList":[],
   "managed":true,
-  "name":"obj_assembled_downwall2",
+  "name":"obj_assembled_rm_lab1_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"rm_lab2",
-    "path":"folders/Objects/overworld/assembled tilesets/labs/rm_lab2.yy",
+    "name":"rm_lab1",
+    "path":"folders/Objects/overworld/assembled tilesets/labs/rm_lab1.yy",
   },
   "parentObjectId":{
     "name":"obj_par_downwall",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_assembled_downwall1",
-    "path":"sprites/spr_assembled_downwall1/spr_assembled_downwall1.yy",
+    "name":"spr_assembled_rm_lab1_1",
+    "path":"sprites/spr_assembled_rm_lab1_1/spr_assembled_rm_lab1_1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

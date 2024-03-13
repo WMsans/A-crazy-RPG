@@ -10,8 +10,8 @@ enum game_states{
 }
 enum layers{
 	overworld = 0,
-	lighting = -50,
-	downwall = -200,
+	downwall = -100,
+	lighting = -200,
 	buttons = -300,
 	UI = -400,
 	setting = -500,

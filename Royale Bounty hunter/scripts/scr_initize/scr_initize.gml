@@ -27,7 +27,7 @@ function scr_initize(){
 	global.target_x=global.checkpoint_x;
 	global.target_y=global.checkpoint_y;
 	
-	global.debug = 0;
+	global.debug = 1;
 	global.backpacksize = 999;
 	scr_item_add(1);
 	scr_item_add(2);
