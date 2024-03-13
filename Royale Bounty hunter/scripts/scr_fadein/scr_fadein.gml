@@ -1,16 +1,19 @@
+///@arg fadein object
 ///@arg fadeinrate
-function scr_fadein(){
-	if(!instance_exists(obj_fade)){
-		show_debug_message(string(obj_fade.fadeout))
-		if(argument_count==0) instance_create_depth(0,0,layers.fade,obj_fade);
-		if(argument_count==1) with(instance_create_depth(0,0,layers.fade,obj_fade)){
-			fadeinrate=argument0;
-		}
+function scr_fadein(_fade_object = obj_fade){
+	if(_fade_object == noone) _fade_object = obj_fade;
+	if(!instance_exists(_fade_object)){
+		if(argument_count==2) {
+			with(instance_create_depth(0,0,layers.fade,_fade_object)){
+				fadeinrate=argument0;
+			}
+		} else instance_create_depth(0,0,layers.fade,_fade_object);
 	}else{
-		obj_fade.fadeout=0; 
+		_fade_object.fadeout=0; 
 		
-		if(argument_count == 1){
-			obj_fade.fadeinrate=argument0;
+		if(argument_count == 2){
+			_fade_object.fadeinrate=argument0;
 		}
 	}
+	global.fade_object = noone;
 }

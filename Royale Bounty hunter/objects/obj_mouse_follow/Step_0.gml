@@ -70,5 +70,7 @@ if(instance_exists(obj_player) && global.gamestate == game_states.init && !insta
 		vsp = 0;
 	
 	}
+}else if(instance_exists(obj_fade)){
+	cursor_showing = false;
 }
 

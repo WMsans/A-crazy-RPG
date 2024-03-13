@@ -1,5 +1,5 @@
 function scr_roomcode(){
-	scr_fadein();
+	scr_fadein();//global.fade_object
 	global.expecting_textblock_x=-999;
 	global.expecting_textblock_y=-999;
 	if(!instance_exists(obj_camera)){

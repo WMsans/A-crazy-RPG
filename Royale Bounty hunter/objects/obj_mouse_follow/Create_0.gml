@@ -17,7 +17,7 @@ ori_max_sp = 6;
 
 #region cursor
 depth = layers.cursor;
-cursor_showing = true;
+cursor_showing = false;
 cursor_x = -999;
 cursor_y = -999;
 
