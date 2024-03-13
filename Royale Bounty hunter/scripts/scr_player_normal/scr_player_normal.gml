@@ -55,6 +55,23 @@ function scr_player_normal(){
 			}
 			vsp=0;
 		}
+		
+		if(scr_line_touch_block(bbox_left, bbox_top, bbox_left + hsp, bbox_top + vsp, false) || scr_line_touch_block(bbox_left, bbox_bottom, bbox_left+ hsp, bbox_bottom + vsp, false) || scr_line_touch_block(bbox_right, bbox_bottom, bbox_right+ hsp, bbox_bottom + vsp, false) || scr_line_touch_block(bbox_right, bbox_top, bbox_right+ hsp, bbox_top + vsp, false)){
+			var single_h=sign(hsp);
+			var single_v=sign(vsp) * abs(vsp / hsp);
+			
+			while(!scr_touch_block(x + single_h , y+ single_v)){
+				x += single_h;
+				y+=single_v;
+			}
+			if(scr_player_get_speeding()){
+				if(ds_list_find_index(hit_blocks, scr_place_block(x + single_h , y+ single_v)) == -1){
+					ds_list_add(hit_blocks, scr_place_block(x + single_h, y+ single_v));
+				}
+			}
+			hsp = 0;
+			vsp=0;
+		}
 	}
 	x+=hsp;//move the character hon
 	y+=vsp;//move the character vir
